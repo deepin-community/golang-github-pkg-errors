@@ -1,0 +1,30 @@
+Source: golang-github-pkg-errors
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Anthony Fok <foka@debian.org>
+Section: devel
+Testsuite: autopkgtest-pkg-go
+Priority: optional
+Build-Depends: debhelper-compat (= 12),
+               dh-golang,
+               golang-any
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-pkg-errors
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-pkg-errors.git
+Homepage: https://github.com/pkg/errors
+Rules-Requires-Root: no
+XS-Go-Import-Path: github.com/pkg/errors
+
+Package: golang-github-pkg-errors-dev
+Architecture: all
+Multi-Arch: foreign
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Simple error handling primitives for Go
+ Package errors provides simple error handling primitives for the Go
+ programming language.
+ .
+ The traditional error handling idiom in Go results in error reports without
+ context or debugging information.
+ .
+ The errors package allows programmers to add context to the failure path in
+ their code in a way that does not destroy the original value of the error.
